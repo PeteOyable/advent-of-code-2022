@@ -1,8 +1,4 @@
-export function giveThanks(from: string) {
-  return `${from} fait dire : 'Merci Mercantile !'`;
-}
-
-giveThanks('Ronald');
+import './day-01';
 
 function enableWatchMode() {
   setInterval(() => {}, 1 << 30);
