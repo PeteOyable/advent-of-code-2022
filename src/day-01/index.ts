@@ -1,3 +1,4 @@
+export {};
 const fs = require('fs');
 const eol = require('os').EOL;
 const path = require('path');
