@@ -28,17 +28,13 @@ const secondMoves: Record<string, number> = {
   'C Z': 1 + 6,
 };
 
-const getEarninPoints = (moves: Record<string, number>) =>
+const getEarningPoints = (moves: Record<string, number>) =>
   data
     .map((line: string[]) => moves[line.join(' ')])
     .filter((point: number) => point)
     .reduce((previousValue: number, currentValue: number) => previousValue + currentValue, 0);
 
 const data = input.split(eol).map((line: string) => line.split(' '));
-const points = data
-  .map((line: string[]) => firstMoves[line.join(' ')])
-  .filter((point: number) => point)
-  .reduce((previousValue: number, currentValue: number) => previousValue + currentValue, 0);
 
-console.log('First part :', getEarninPoints(firstMoves));
-console.log('Second part :', getEarninPoints(secondMoves));
+console.log('First part :', getEarningPoints(firstMoves));
+console.log('Second part :', getEarningPoints(secondMoves));
