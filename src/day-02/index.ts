@@ -30,11 +30,11 @@ const secondMoves: Record<string, number> = {
 
 const getEarningPoints = (moves: Record<string, number>) =>
   data
-    .map((line: string[]) => moves[line.join(' ')])
+    .map((line: string) => moves[line])
     .filter((point: number) => point)
     .reduce((previousValue: number, currentValue: number) => previousValue + currentValue, 0);
 
-const data = input.split(eol).map((line: string) => line.split(' '));
+const data = input.split(eol).map((line: string) => line);
 
 console.log('First part :', getEarningPoints(firstMoves));
 console.log('Second part :', getEarningPoints(secondMoves));
